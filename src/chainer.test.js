@@ -15,10 +15,10 @@ describe('chainer', () => {
     return Math.pow(x, 2);
   };
 
-  it('should work correctly if value is present', () => {
+  it('should apply functions from right to left', () => {
     const chained = chainer([f1, f2, f3]);
 
-    expect(chained(1)).toBe(6);
+    expect(chained(1)).toBe(16);
   });
 
   it('should return default value, if functions is empty', () => {
