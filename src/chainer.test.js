@@ -26,4 +26,10 @@ describe('chainer', () => {
 
     expect(chained(4)).toBe(4);
   });
+
+  it('should work correctly with a only one function', () => {
+    const chained = chainer([f3]);
+
+    expect(chained(3)).toBe(9);
+  });
 });
